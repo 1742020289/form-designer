@@ -2,53 +2,30 @@
   <main class="designer-container">
     <aside class="sidebar left-sidebar">
       <!-- 左侧组件列表 -->
-      <div
-        v-for="component in components"
-        :key="component.type"
-        class="component-item"
-      >
-        {{ component.label }}
-      </div>
+      <widget-panel />
     </aside>
-    <section class="canvas">
-      <!-- 中间画布区域 -->
-      <div
-        v-for="(item, index) in formItems"
-        :key="index"
-        class="form-item"
-      >
-        <component
-          :is="item.type"
-          v-bind="item.props"
-        />
-      </div>
+    <section class="center-container">
+      <tool-bar />
+      <!-- 设计区域 -->
+      <design-area />
     </section>
     <aside class="sidebar right-sidebar">
-      <!-- 右侧属性编辑 -->
-      <div v-if="selectedComponent">
-        <h3>属性编辑</h3>
-        <!-- 属性编辑表单 -->
-      </div>
+      <setting-panel />
     </aside>
   </main>
 </template>
 
 <script setup lang="ts">
 import { ref } from 'vue'
-
+import WidgetPanel from './widget-panel/index.vue'
+import SettingPanel from './setting-panel/index.vue'
+import ToolBar from './tool-bar/index.vue'
+import DesignArea from './design-area/index.vue'
 interface Component {
   type: string
   label: string
   props: Record<string, any>
 }
-
-const components: Component[] = [
-  { type: 'a-input', label: 'Input', props: { placeholder: 'Enter text' } },
-  { type: 'a-button', label: 'Button', props: { type: 'primary', text: 'Submit' } }
-]
-
-const formItems = ref<Component[]>([])
-const selectedComponent = ref<Component | null>(null)
 </script>
 
 <style scoped lang="less">
@@ -56,6 +33,13 @@ const selectedComponent = ref<Component | null>(null)
   display: flex;
   height: 100vh;
   width: 100vw;
+}
+
+.center-container {
+  flex: 1;
+  padding: 10px;
+  background-color: #fff;
+  overflow-y: auto;
 }
 
 .sidebar {
