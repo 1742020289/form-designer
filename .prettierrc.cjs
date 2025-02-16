@@ -8,7 +8,6 @@ module.exports = {
   quoteProps: 'as-needed', // 仅在需要时在对象属性周围添加引号
   bracketSpacing: true, // 对象字面量的大括号间使用空格（默认true）
   trailingComma: 'none', // 多行使用拖尾逗号（默认none）
-  jsxBracketSameLine: false,
   jsxSingleQuote: false, // 在 JSX 中使用单引号代替双引号
   arrowParens: 'always', // 只有一个参数的箭头函数的参数是否带圆括号（默认avoid）
   insertPragma: false, // 插入编译指示

@@ -14,5 +14,8 @@ import { ref, reactive, computed, onMounted } from 'vue'
 </script>
 
 <style scoped lang="less">
-/* Your styles here */
+.tool-bar {
+  border: 1px solid #ccc;
+  border-radius: 8px;
+}
 </style>
