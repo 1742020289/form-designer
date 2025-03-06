@@ -1,14 +1,8 @@
 {
   "files": [],
-  "references": [
-    { "path": "./tsconfig.app.json" },
-    { "path": "./tsconfig.node.json" }
-  ],
+  "references": [{ "path": "./tsconfig.app.json" }, { "path": "./tsconfig.node.json" }],
   "compilerOptions": {
     "types": ["vite-plugin-eslint"],
-    "include": [
-      "src",
-      "src/types"
-    ]
+    "include": ["src", "src/types", "src/components", "shims-vue.d.ts"]
   }
 }
