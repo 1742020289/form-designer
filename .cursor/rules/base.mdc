@@ -1,0 +1,68 @@
+---
+description: 页面开发的基本规范
+globs: *.vue
+alwaysApply: false
+---
+# Cursor Rules
+
+## Project Information
+- Name: form-designer
+- Description: 基于 Vue.js 的表单设计器项目，允许用户通过拖拽组件来创建和管理表单
+- Version: 0.0.0
+
+## File Patterns
+
+### Vue Components
+- Pattern: `src/**/*.vue`
+- Language: vue
+- Description: Vue 组件文件
+
+### TypeScript Files
+- Pattern: `src/**/*.ts`
+- Language: typescript
+- Description: TypeScript 源文件
+
+### Form Designer Components
+- Pattern: `src/components/form-designer/**`
+- Description: 表单设计器相关组件
+
+### UI 组件使用
+- 使用 ant-design-vue 的组件
+
+### SVG Icon Components
+- Pattern: `src/components/svg-icon/**`
+- Description: SVG 图标组件
+
+### Style Files
+- Pattern: `*.less`
+- Language: less
+- Description: Less 样式文件
+
+### Configuration Files
+- Pattern: `vite.config.ts`
+- Description: Vite 配置文件
+- Pattern: `tsconfig*.json`
+- Description: TypeScript 配置文件
+
+## Ignored Directories
+- Pattern: `node_modules/**`
+- Description: 项目依赖，忽略处理
+- Pattern: `dist/**`
+- Description: 构建输出目录，忽略处理
+- Pattern: `coverage/**`
+- Description: 测试覆盖率报告，忽略处理
+
+## Dependencies
+- vue: ^3.5.13
+- ant-design-vue: ^4.2.6
+- vuedraggable: ^4.1.0
+
+## Development Tools
+- vite
+- typescript
+- eslint
+- prettier
+
+
+
+
