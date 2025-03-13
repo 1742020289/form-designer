@@ -8,6 +8,7 @@
           :list="formItems"
           tag="ul"
           :group="{ name: 'dragGroup', pull: 'clone', put: false }"
+          :clone="clone"
           item-key="type"
           class="list-group"
         >
@@ -42,13 +43,17 @@
 <script setup lang="ts">
 import { getCurrentInstance, ref } from 'vue'
 import SvgIcon from '@/components/svg-icon/index.vue'
-import { formItems } from '@/form-items/index'
+import { formItems } from './form-items/index'
 import Draggable from 'vuedraggable'
 import SettingPanel from './setting-panel/index.vue'
 import ToolBar from './tool-bar/index.vue'
 import Designer from './designer/index.vue'
 
 const designList = ref([])
+const clone = (item: any) => {
+  console.log(item)
+  return JSON.parse(JSON.stringify(item))
+}
 </script>
 
 <style scoped lang="less">

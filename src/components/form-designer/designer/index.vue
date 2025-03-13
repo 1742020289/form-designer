@@ -7,7 +7,7 @@
         v-bind="{ group: 'dragGroup', ghostClass: 'ghost', animation: 300 }"
       >
         <template #item="{ element }">
-          <div>{{ element.name }}</div>
+          <div>{{ element.compName }}</div>
         </template>
       </draggable>
     </a-form>
